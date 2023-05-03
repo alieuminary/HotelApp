@@ -1,0 +1,12 @@
+C:\Users\new\source\repos\HotelApp\HotelAppLibrary\obj\Debug\net5.0\HotelAppLibrary.csproj.AssemblyReference.cache
+C:\Users\new\source\repos\HotelApp\HotelAppLibrary\obj\Debug\net5.0\HotelAppLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\new\source\repos\HotelApp\HotelAppLibrary\obj\Debug\net5.0\HotelAppLibrary.AssemblyInfoInputs.cache
+C:\Users\new\source\repos\HotelApp\HotelAppLibrary\obj\Debug\net5.0\HotelAppLibrary.AssemblyInfo.cs
+C:\Users\new\source\repos\HotelApp\HotelAppLibrary\obj\Debug\net5.0\HotelAppLibrary.csproj.CoreCompileInputs.cache
+C:\Users\new\source\repos\HotelApp\HotelAppLibrary\bin\Debug\net5.0\HotelAppLibrary.deps.json
+C:\Users\new\source\repos\HotelApp\HotelAppLibrary\bin\Debug\net5.0\HotelAppLibrary.dll
+C:\Users\new\source\repos\HotelApp\HotelAppLibrary\bin\Debug\net5.0\HotelAppLibrary.pdb
+C:\Users\new\source\repos\HotelApp\HotelAppLibrary\obj\Debug\net5.0\HotelAppLibrary.dll
+C:\Users\new\source\repos\HotelApp\HotelAppLibrary\obj\Debug\net5.0\refint\HotelAppLibrary.dll
+C:\Users\new\source\repos\HotelApp\HotelAppLibrary\obj\Debug\net5.0\HotelAppLibrary.pdb
+C:\Users\new\source\repos\HotelApp\HotelAppLibrary\obj\Debug\net5.0\ref\HotelAppLibrary.dll
