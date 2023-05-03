@@ -1,6 +1,6 @@
 # Simple Hotel Management Application
 
-# Description
+## Description
 
 - This is a simple hotel management system application that showcases some of the things I learned teaching myself C#/.NET.
 
@@ -8,14 +8,14 @@
 
 - Additionally there are database files containing store procedures, tables, and a publish profile that the application will be using in context of. 
 
-# Technologies Used
+## Technologies Used
 - C#
 - ASP.NET
 - WPF
 - SQL Server
 - SQL Lite
 
-# Instructions
+## Instructions
 
 
 
