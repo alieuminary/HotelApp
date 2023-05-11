@@ -79,11 +79,11 @@ namespace HotelAppLibrary.Data
                           true);
         }
 
-        // gets the guest's booking information by their first and last name
-        public List<FullBookingModel> GetFilterBookings(string firstName, string lastName)
+        // gets the guest's booking information by their last name
+        public List<FullBookingModel> GetFilterBookings(string lastName)
         {
-            var output = _db.LoadData<FullBookingModel, dynamic>("dbo.spBookings_GetFilterBookings",
-                                                       new { firstName, lastName, startDate = DateTime.Now.Date },
+            List<FullBookingModel> output = _db.LoadData<FullBookingModel, dynamic>("dbo.spBookings_GetFilterBookings",
+                                                       new { lastName, startDate = DateTime.Now.Date },
                                                        connectionStringName,
                                                        true);
             return output;
@@ -96,20 +96,6 @@ namespace HotelAppLibrary.Data
                          new { Id = bookingId },
                          connectionStringName,
                          true);
-        }
-
-        // my method - can delete
-        public void GuestCheckIn(string firstName, string lastName)
-        {
-            FullBookingModel booking = GetFilterBookings(firstName, lastName).First();
-
-            int guestId = booking.GuestId;
-            int roomId = booking.RoomId;
-
-            _db.SaveData("UPDATE dbo.bookings SET CheckedIn = 1 where GuestId = @guestId AND RoomId = @roomId;",
-                         new { guestId, roomId },
-                         connectionStringName,
-                         false);
         }
 
         // my method

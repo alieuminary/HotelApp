@@ -22,12 +22,15 @@ namespace HotelApp.Desktop
         // this class gets called first before WPF main window launches.
         // Configure settings here.
 
+        public static ServiceProvider serviceProvider;
+
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
 
             var services = new ServiceCollection(); // obj from microsoft.extensions.dependencyinjection
             services.AddTransient<MainWindow>(); // adding main window to dependency injection; always creates a new instance
+            services.AddTransient<CheckInForm>();
             services.AddTransient<IDatabaseData, SqlData>();
             services.AddTransient<ISqlDataAccess, SqlDataAccess>();
 
@@ -42,9 +45,9 @@ namespace HotelApp.Desktop
             // Add IConfiguration to DI - only one instance to work with the same file.
             services.AddSingleton(config);
 
-            var serviceProvider = services.BuildServiceProvider();
+            serviceProvider = services.BuildServiceProvider();
             var mainWindow = serviceProvider.GetService<MainWindow>(); // get the service that was added to the serviceCollection
-
+                
             mainWindow.Show();
         }
     }

@@ -15,6 +15,10 @@ namespace HotelAppLibrary.Models
         public bool CheckedIn { get; set; }
         public int GuestId { get; set; }
         public int RoomId { get; set; }
+        public decimal Price { get; set; }
+        public decimal TotalCost { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
     }
 }
 

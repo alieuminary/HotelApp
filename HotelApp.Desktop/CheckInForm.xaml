@@ -1,0 +1,54 @@
+﻿<Window x:Class="HotelApp.Desktop.CheckInForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HotelApp.Desktop"
+        mc:Ignorable="d" FontSize="20" FontFamily="Segoe UI"
+        Title="CheckInForm" Height="300" Width="500" WindowStartupLocation="CenterOwner">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Reservation Name-->
+        <StackPanel Orientation="Horizontal" Grid.Row="0">
+            <TextBlock FontWeight="Bold" Margin="5" >Reservation:</TextBlock>
+            <TextBlock x:Name="firstNameText" Margin="5"/>
+            <TextBlock x:Name="lasttNameText" Margin="5"/>
+        </StackPanel>
+        <!-- Room title-->
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <TextBlock FontWeight="Bold" Margin="5">Room:</TextBlock>
+            <TextBlock x:Name="roomTitleText" Margin="5"/>
+        </StackPanel>
+
+        <!-- Room number -->
+        <StackPanel Orientation="Horizontal" Grid.Row="2">
+            <TextBlock FontWeight="Bold" Margin="5" >Room Number:</TextBlock>
+            <TextBlock x:Name="roomNumberText" Margin="5"/>
+        </StackPanel>
+
+        <!-- Total cost -->
+        <StackPanel Orientation="Horizontal" Grid.Row="3">
+            <TextBlock FontWeight="Bold" Margin="5" >Total Cost:</TextBlock>
+            <TextBlock x:Name="totalCostText" Margin="5"/>
+        </StackPanel>
+
+        <Button x:Name="checkInUser" Click="checkInUser_Click" Margin="10" Padding="20 10" Grid.Row="4" Content="Confirm Check-In" />
+
+
+
+    </Grid>
+
+</Window>

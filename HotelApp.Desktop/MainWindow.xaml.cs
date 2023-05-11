@@ -16,6 +16,7 @@ using System.Windows.Shapes;
 using HotelAppLibrary.Data;
 using HotelAppLibrary.Databases;
 using HotelAppLibrary.Models;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace HotelApp.Desktop
 {
@@ -25,19 +26,32 @@ namespace HotelApp.Desktop
     public partial class MainWindow : Window
     {
         private readonly IDatabaseData _db;
-        List<FullBookingModel> results = new List<FullBookingModel>();
+        //List<FullBookingModel> resultsList = new List<FullBookingModel>();
 
         public MainWindow(IDatabaseData db)
         {
             _db = db;
             InitializeComponent();
 
-            bookingsList.ItemsSource = results;
+
         }
 
-        private void SearchBookings_Click(object sender, RoutedEventArgs e)
+        private void searchForGuest_Click(object sender, RoutedEventArgs e)
         {
-            results = _db.GetFilterBookings(firstName.Text, lastName.Text);
+            List<FullBookingModel> bookings = _db.GetFilterBookings(lastNameText.Text);
+            resultsList.ItemsSource = bookings;
+
+        }
+
+        private void CheckInButton_Click(object sender, RoutedEventArgs e)
+        {
+            var checkInForm = App.serviceProvider.GetService<CheckInForm>();
+
+            var model = (FullBookingModel)((Button)e.Source).DataContext;
+
+            checkInForm.PopulateCheckInInfo(model);
+
+            checkInForm.Show();
         }
     }
 }
