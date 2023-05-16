@@ -44,7 +44,7 @@ namespace HotelAppLibrary.Data
                                                          connectionStringName,
                                                          true).First();
 
-            // [] get roomtype price
+            // [x] get roomtype price
             // create a sql statement inline that will get the pricing based on the room_type_id
             // this will be used to calculate the total cost spent
             // insert to TotalCost property

@@ -13,7 +13,7 @@ begin
 		from dbo.Bookings b
 		where (@startDate < b.StartDate and @endDate > b.EndDate)
 			or (b.StartDate <= @endDate and @endDate < b.EndDate)
-			or (b.StartDate <= @startdate and @startDate < b.EndDate)
+			or (b.StartDate <= @startDate and @startDate < b.EndDate)
 	)
 	group by rt.Id, rt.Title, rt.Description, rt.Price
 end
